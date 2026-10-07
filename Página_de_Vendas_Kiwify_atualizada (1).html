@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Venda na Kiwify - Guia Prático</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#080d0a',
+                            card: '#111a14',
+                            cardBorder: '#1c2b21',
+                            green: '#00e676',
+                            greenHover: '#00c853',
+                            greenGlow: 'rgba(0, 230, 118, 0.25)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #080d0a;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-radial-gradient {
+            background: radial-gradient(circle at 50% 0%, rgba(0, 230, 118, 0.15) 0%, rgba(8, 13, 10, 1) 75%);
+        }
+
+        .glow-box {
+            box-shadow: 0 0 35px -5px rgba(0, 230, 118, 0.2);
+        }
+
+        .glow-button {
+            box-shadow: 0 0 25px rgba(0, 230, 118, 0.4);
+            animation: pulse-glow 2.5s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 35px rgba(0, 230, 118, 0.7);
+            }
+        }
+
+        /* Mockup 3D Effect */
+        .book-container {
+            perspective: 1000px;
+        }
+
+        .book-3d {
+            transform: rotateY(-12deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+            transform-style: preserve-3d;
+        }
+
+        .book-container:hover .book-3d {
+            transform: rotateY(-4deg) rotateX(2deg) scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-radial-gradient min-h-screen text-slate-200 antialiased selection:bg-brand-green selection:text-black">
+
+    <main class="max-w-4xl mx-auto px-4 py-8 sm:py-12 flex flex-col items-center">
+        
+        <!-- Tag Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/30 text-brand-green font-bold text-xs uppercase tracking-wider mb-8">
+            <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
+            E-BOOK DIGITAL
+        </div>
+
+        <div class="book-container w-full max-w-[320px] sm:max-w-[380px] my-2">
+            <div class="book-3d relative bg-gradient-to-br from-slate-900 via-[#0a140e] to-[#040806] rounded-2xl border border-brand-green/30 p-6 shadow-2xl glow-box flex flex-col items-center text-center">
+                
+                <!-- Mockup Banner Header -->
+                <div class="text-[10px] font-extrabold uppercase tracking-widest text-brand-green bg-brand-green/10 px-3 py-1 rounded-md border border-brand-green/20 mb-4">
+                    E-BOOK COMPLETO
+                </div>
+
+                <!-- Mockup Title -->
+                <h3 class="text-xl sm:text-2xl font-black text-white leading-tight uppercase tracking-tight mb-1">
+                    COMO FAZER SUA<br>
+                    <span class="text-brand-green drop-shadow-[0_0_10px_rgba(0,230,118,0.5)]">PRIMEIRA VENDA</span><br>
+                    NA <span class="text-white flex items-center justify-center gap-1 inline-flex">
+                        <svg class="w-5 h-5 text-brand-green inline" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        kiwify
+                    </span>
+                </h3>
+
+                <p class="text-[10px] text-slate-400 mt-1 max-w-[220px]">
+                    Do zero ao primeiro cliente: passo a passo prático para criar e vender na internet.
+                </p>
+
+                <!-- Mockup Graphic Elements -->
+                <div class="my-6 w-full bg-slate-950/80 rounded-xl p-4 border border-slate-800 relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-3">
+                        <div class="text-left">
+                            <span class="text-[9px] text-slate-400 block">Vendas hoje</span>
+                            <span class="text-sm font-bold text-white">R$ 520,00</span>
+                        </div>
+                        <span class="bg-brand-green/20 text-brand-green text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                            ↑ +100%
+                        </span>
+                    </div>
+                    <!-- Chart Simulation -->
+                    <div class="h-10 flex items-end gap-1.5 justify-between px-1">
+                        <div class="w-full bg-brand-green/20 h-[30%] rounded-t"></div>
+                        <div class="w-full bg-brand-green/30 h-[45%] rounded-t"></div>
+                        <div class="w-full bg-brand-green/40 h-[35%] rounded-t"></div>
+                        <div class="w-full bg-brand-green/60 h-[70%] rounded-t"></div>
+                        <div class="w-full bg-brand-green h-[100%] rounded-t shadow-[0_0_10px_#00e676]"></div>
+                    </div>
+                </div>
+
+                <!-- Mockup Footer Icons -->
+                <div class="grid grid-cols-4 gap-2 w-full text-[9px] text-slate-400 pt-2 border-t border-slate-800">
+                    <div>
+                        <span class="block text-brand-green">🎯</span>
+                        <span>Escolha</span>
+                    </div>
+                    <div>
+                        <span class="block text-brand-green">📦</span>
+                        <span>Oferta</span>
+                    </div>
+                    <div>
+                        <span class="block text-brand-green">📣</span>
+                        <span>Divulgue</span>
+                    </div>
+                    <div>
+                        <span class="block text-brand-green">🚀</span>
+                        <span>Venda</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white text-center mt-10 tracking-tight leading-tight">
+            Primeira Venda na <span class="text-brand-green">Kiwify</span>
+        </h1>
+
+        <p class="text-slate-400 text-center text-sm sm:text-base max-w-xl mt-3 leading-relaxed">
+            Do zero ao primeiro cliente: aprenda os principais passos para criar, apresentar e divulgar seu produto digital.
+        </p>
+
+        <!-- Price Section -->
+        <div class="mt-8 text-center">
+            <span class="text-slate-500 text-xs line-through block font-medium">De R$ 47,00 por apenas</span>
+            <div class="text-4xl sm:text-5xl font-black text-brand-green my-1 tracking-tight">
+                R$ 10,50
+            </div>
+            <span class="text-slate-400 text-xs font-medium">Pagamento único • Acesso imediato</span>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://pay.kiwify.com.br/zAsa8Eu" id="btn-cta" class="glow-button w-full max-w-md mt-6 bg-brand-green hover:bg-brand-greenHover text-slate-950 font-black text-lg sm:text-xl py-4 px-8 rounded-2xl text-center uppercase tracking-wide transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+            QUERO MEU E-BOOK
+            <svg class="w-6 h-6 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <section class="w-full mt-16">
+            <h2 class="text-xl sm:text-2xl font-bold text-white text-center mb-6">
+                Sobre o produto
+            </h2>
+
+            <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 sm:p-8 text-slate-300 text-sm sm:text-base leading-relaxed relative">
+                <p>
+                    🚀 <strong>Quer fazer sua primeira venda na Kiwify, mas não sabe por onde começar?</strong> Este e-book mostra, de forma simples e prática, o caminho desde a escolha do produto e do público até a criação da oferta e divulgação. Aprenda estratégias para atrair pessoas, melhorar suas vendas e evitar erros comuns. Um guia completo para quem está começando do zero!
+                </p>
+            </div>
+        </section>
+
+        <section class="w-full mt-16">
+            <h2 class="text-xl sm:text-2xl font-bold text-white text-center mb-8">
+                O que você vai aprender?
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <!-- Card 1 -->
+                <div class="bg-brand-card border border-brand-cardBorder hover:border-brand-green/40 transition-all rounded-2xl p-6 flex flex-col justify-start">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-xl">🎯</span>
+                        <h3 class="font-bold text-brand-green text-base sm:text-lg">Escolha do produto</h3>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Como escolher o que vender e encontrar um público específico e comprador.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card border border-brand-cardBorder hover:border-brand-green/40 transition-all rounded-2xl p-6 flex flex-col justify-start">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-xl">📦</span>
+                        <h3 class="font-bold text-brand-green text-base sm:text-lg">Criação da oferta</h3>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Como apresentar seu produto de maneira clara, atrativa e irresistível.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card border border-brand-cardBorder hover:border-brand-green/40 transition-all rounded-2xl p-6 flex flex-col justify-start">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-xl">📣</span>
+                        <h3 class="font-bold text-brand-green text-base sm:text-lg">Divulgação</h3>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Como criar conteúdo estratégico e começar a divulgar nas redes sociais sem gastar.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-card border border-brand-cardBorder hover:border-brand-green/40 transition-all rounded-2xl p-6 flex flex-col justify-start">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-xl">🚀</span>
+                        <h3 class="font-bold text-brand-green text-base sm:text-lg">Primeira venda</h3>
+                    </div>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Como testar, analisar e melhorar sua estratégia para vender com constância.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full mt-16">
+            <h2 class="text-xl sm:text-2xl font-bold text-white text-center mb-8">
+                O que está dentro do e-book?
+            </h2>
+
+            <div class="bg-brand-card border border-brand-cardBorder rounded-2xl p-6 sm:p-8">
+                <ul class="space-y-4 text-sm sm:text-base text-slate-300">
+                    <li class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Passo a passo do zero:</strong> Configuração básica da conta até o cadastro perfeito do produto.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Copywriting simplificado:</strong> Como escrever textos que fazem o cliente querer comprar na hora.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Estratégia sem tráfego pago:</strong> Métodos para vender de forma orgânica no Instagram e TikTok.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                        <span><strong>Checklist de lançamento:</strong> Tópicos para revisar antes de colocar sua oferta no ar.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="w-full mt-16 bg-brand-card/50 border border-brand-cardBorder rounded-2xl p-6 sm:p-8 text-center flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green text-2xl mb-4">
+                🛡️
+            </div>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">Garantia Incondicional de 7 Dias</h3>
+            <p class="text-slate-400 text-xs sm:text-sm max-w-md mb-6 leading-relaxed">
+                Se você ler o material e achar que ele não te ajudou em nada, basta solicitar o reembolso na Kiwify dentro de 7 dias e devolveremos 100% do seu dinheiro.
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-4 text-xs text-slate-400">
+                <span class="flex items-center gap-1.5"><span class="text-brand-green">✓</span> Compra 100% Segura</span>
+                <span class="flex items-center gap-1.5"><span class="text-brand-green">✓</span> Receba no seu E-mail</span>
+                <span class="flex items-center gap-1.5"><span class="text-brand-green">✓</span> Acesso Imediato</span>
+            </div>
+        </section>
+
+        <div class="w-full mt-12 bg-gradient-to-b from-brand-card to-slate-950 border border-brand-green/30 rounded-2xl p-8 text-center glow-box">
+            <h3 class="text-2xl font-black text-white mb-2">Comece a Vender Hoje Mesmo</h3>
+            <p class="text-slate-400 text-sm mb-6">Aproveite o preço especial de lançamento por tempo limitado.</p>
+            
+            <div class="text-3xl sm:text-4xl font-black text-brand-green mb-6">
+                R$ 10,50
+            </div>
+
+            <a href="https://pay.kiwify.com.br/zAsa8Eu" id="btn-cta-bottom" class="glow-button w-full max-w-md mx-auto bg-brand-green hover:bg-brand-greenHover text-slate-950 font-black text-lg py-4 px-8 rounded-2xl text-center uppercase tracking-wide transition-all duration-200 block">
+                COMPRAR AGORA
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="w-full text-center py-8 text-slate-600 text-xs border-t border-slate-900 mt-12">
+        <p>&copy; 2026 Todos os direitos reservados. Este site não faz parte do site do Facebook ou da Meta Inc.</p>
+    </footer>
+
+    <script>
+        // CONFIGURAÇÃO DO CHECKOUT:
+        // Substitua 'SUA_URL_DE_CHECKOUT_AQUI' pelo link do seu produto na Kiwify.
+        const LINK_CHECKOUT_KIWIFY = "https://pay.kiwify.com.br/zAsa8Eu";
+
+        function redirecionarParaCheckout(e) {
+            e.preventDefault();
+            if (LINK_CHECKOUT_KIWIFY && LINK_CHECKOUT_KIWIFY !== "https://checkout.kiwify.com.br/") {
+                window.location.href = LINK_CHECKOUT_KIWIFY;
+            } else {
+                // Notificação amigável caso o link ainda não tenha sido alterado
+                const btn = e.currentTarget;
+                const textoOriginal = btn.innerText;
+                btn.innerText = "CONFIGURE SEU LINK NO CÓDIGO!";
+                btn.classList.add("bg-amber-400");
+                setTimeout(() => {
+                    btn.innerText = textoOriginal;
+                    btn.classList.remove("bg-amber-400");
+                }, 3000);
+            }
+        }
+
+        document.getElementById('btn-cta').addEventListener('click', redirecionarParaCheckout);
+        document.getElementById('btn-cta-bottom').addEventListener('click', redirecionarParaCheckout);
+    </script>
+</body>
+</html>
